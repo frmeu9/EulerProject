@@ -30,6 +30,9 @@ limite = 2000000
 
 while nb < limite:
     nb += 1
+    if nb > 3:
+        if nb % 2 == 0 or nb % 3 == 0:
+            continue
     if isprime(nb) is True:
         summ += nb
     else:

@@ -18,6 +18,7 @@
 # What is the value of the first triangle number to have over five hundred divisors?
 
 from FindFactors import FindFactors
+from isprime import isprime
 
 mult = []
 num = 1
@@ -25,7 +26,10 @@ num = 1
 while len(mult) < 500:
     mult = []
     num += 1
-    mult = FindFactors(num)
+    if isprime(num) is True:
+        continue
+    else:
+        mult = FindFactors(num)
 
 print(num)
 # 76576500
