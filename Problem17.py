@@ -37,7 +37,7 @@ for i in range(len(numList_str)):
     if len(numList_str[i]) == 2:
         if numList_str[i][0] == '1':
             numChar += num_dict[int(numList_str[i])]
-        if numList_str[i][0] != '1':
+        elif numList_str[i][0] != '1':
             numChar += num_dict[int(numList_str[i][0])*10]
             if int(numList_str[i][1]) == 0:
                 continue
@@ -47,9 +47,9 @@ for i in range(len(numList_str)):
         numChar += num_dict[int(numList_str[i][0])] + 'hundred'
         if numList_str[i][1] == '0' and numList_str[i][2] == '0':
             continue
-        if numList_str[i][1] == '1' or numList_str[i][1] == '0':
+        elif numList_str[i][1] == '1' or numList_str[i][1] == '0':
             numChar += 'and' + num_dict[int(numList_str[i][1:3])]
-        if numList_str[i][1] > '1':
+        elif numList_str[i][1] > '1':
             numChar += 'and' + num_dict[int(numList_str[i][1]) * 10]
             if int(numList_str[i][2]) == 0:
                 continue
