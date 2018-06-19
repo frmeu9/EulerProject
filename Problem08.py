@@ -42,10 +42,9 @@ prod = []
 for i in range(len(num_lst)):
     som = 1
     for j in range(13):
-        sum *= int(num_lst[i][j])
+        som *= int(num_lst[i][j])
     prod.append(som)
 
 
-prod.sort(reverse=True)
-print(prod)
+print(max(prod))
 print(time.time()-t)

@@ -13,7 +13,4 @@ for i in range(100, 1000, 1):
             palin.append(i*j)
 
 
-palin = list(set(palin))
-palin.sort(reverse=True)
-
-print(palin[0])
+print(max(palin))

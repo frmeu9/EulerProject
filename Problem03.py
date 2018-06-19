@@ -37,5 +37,5 @@ for i in range(len(factor)-1):
     if len(factor2) == 2:
         prime.append(factor[i])
 
-prime.sort(reverse=True)
-print(prime[0])
+
+print(max(prime))

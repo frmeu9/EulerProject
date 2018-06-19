@@ -29,6 +29,5 @@ while len(listOfPrime) < 10001:
 
 
 
-listOfPrime.sort(reverse=True)
-print(listOfPrime[0])
+print(max(listOfPrime))
 print(time.time()-t)
