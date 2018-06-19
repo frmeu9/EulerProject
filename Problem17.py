@@ -13,6 +13,8 @@ import numpy as np
 
 # Creating list of numbers from 1 to 1000
 numList = np.linspace(1, 1000, num=1000)
+
+# Creating list of numbers written in letters from 1 to 1000
 numList_str = []
 
 for num in range(len(numList)):
@@ -45,10 +47,8 @@ for i in range(len(numList_str)):
         numChar += num_dict[int(numList_str[i][0])] + 'hundred'
         if numList_str[i][1] == '0' and numList_str[i][2] == '0':
             continue
-        if numList_str[i][1] == '1':
+        if numList_str[i][1] == '1' or  numList_str[i][1] == '0':
             numChar += 'and' + num_dict[int(numList_str[i][1:3])]
-        if numList_str[i][1] == '0':
-            numChar += 'and' + num_dict[int(numList_str[i][2])]
         if numList_str[i][1] > '1':
             numChar += 'and' + num_dict[int(numList_str[i][1]) * 10]
             if int(numList_str[i][2]) == 0:
