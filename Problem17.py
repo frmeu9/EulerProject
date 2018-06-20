@@ -12,6 +12,9 @@
 # The use of "and" when writing out numbers is in compliance with British usage.
 
 import numpy as np
+import time
+
+t = time.time()
 
 
 # Creating list of numbers from 1 to 1000
@@ -61,4 +64,5 @@ for i in range(len(numList_str)):
 
 
 print(len(numChar))
+print(time.time()-t)
 # 21124

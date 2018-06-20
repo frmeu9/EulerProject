@@ -18,8 +18,8 @@ def isprime(nb):
             factor.append(nb / x)
 
     if len(factor) == 2:
-        print("True")
+        # print("True")
         return True
     else:
-        print("False")
+        # print("False")
         return False

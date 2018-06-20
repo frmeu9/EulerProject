@@ -5,6 +5,9 @@
 #
 # What is the sum of the digits of the number 2^1000?
 
+import time
+
+t = time.time()
 num = 2**1000
 num_str = str(num)
 length = len(num_str)
@@ -13,4 +16,5 @@ for i in range(length):
     somme += int(num_str[i])
 
 print(somme)
+print(time.time()-t)
 # 1366

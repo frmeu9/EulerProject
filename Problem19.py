@@ -14,7 +14,10 @@
 # How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
 import datetime as dt
+import time
 
+
+t = time.time()
 count = 0
 
 for year in range(1901, 2001):
@@ -23,4 +26,5 @@ for year in range(1901, 2001):
             count += 1
 
 print(count)
+print(time.time()-t)
 # 171

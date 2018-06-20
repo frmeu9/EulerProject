@@ -6,6 +6,9 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 import numpy as np
+import time
+
+t = time.time()
 
 nb = np.linspace(1, 1000, num=1000)
 # index 0 is first element of the list
@@ -17,4 +20,5 @@ for i in range(999):
         sum_nb = sum_nb + nb[i]
 
 print(sum_nb)
+print(time.time()-t)
 # 233168

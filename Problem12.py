@@ -19,6 +19,9 @@
 
 from FindFactors import FindFactors
 from isprime import isprime
+import time
+
+t = time.time()
 
 mult = []
 num = 1
@@ -32,5 +35,6 @@ while len(mult) < 500:
         mult = FindFactors(num)
 
 print(num)
+print(time.time()-t)
 # 76576500
 # takes too much time

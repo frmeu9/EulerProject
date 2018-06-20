@@ -5,6 +5,9 @@
 # Find the sum of all the primes below two million.
 
 from isprime import isprime
+import time
+
+s = time.time()
 
 nb = 1
 summ = 0
@@ -30,8 +33,8 @@ limite = 2000000
 
 while nb < limite:
     nb += 1
-    if nb > 3:
-        if nb % 2 == 0 or nb % 3 == 0:
+    if nb > 5:
+        if nb % 2 == 0 or nb % 3 == 0 or nb % 5 == 0:
             continue
     if isprime(nb) is True:
         summ += nb
@@ -40,5 +43,5 @@ while nb < limite:
 
 
 print(summ)
+print(time.time()-s)
 # 142913828922
-# takes too much time

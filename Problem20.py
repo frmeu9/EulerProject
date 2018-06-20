@@ -7,6 +7,9 @@
 # Find the sum of the digits in the number 100!
 
 import math
+import time
+
+t = time.time()
 
 # num = 100
 # prod = 1
@@ -22,4 +25,5 @@ for j in range(len(prod_str)):
     somme += int(prod_str[j])
 
 print(somme)
+print(time.time()-t)
 # 648

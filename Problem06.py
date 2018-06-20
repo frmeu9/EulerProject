@@ -11,7 +11,10 @@
 
 
 import numpy as np
+import time
 
+
+t = time.time()
 
 allNum = np.linspace(1, 100, 100)
 SumSq = 0
@@ -22,4 +25,5 @@ sumNum = sum(allNum)
 SqAllNum = sumNum**2
 
 print(SqAllNum - SumSq)
+print(time.time()-t)
 # 25164150

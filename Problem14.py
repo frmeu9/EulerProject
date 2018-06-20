@@ -16,6 +16,9 @@
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
+import time
+
+t = time.time()
 listchain = []
 
 for start in range(1, 1000000):
@@ -39,5 +42,5 @@ for i in range(len(listchain)):
 idx = length.index(max(length))
 # print(idx)
 print(listchain[idx][0])
+print(time.time()-t)
 # 837799
-# takes too much time

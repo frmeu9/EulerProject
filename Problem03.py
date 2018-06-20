@@ -6,7 +6,9 @@
 
 from isprime import isprime
 from FindFactors import FindFactors
+import time
 
+t = time.time()
 num = 600851475143
 factor = []
 
@@ -24,5 +26,5 @@ for i in range(len(factor)-1):
 
 
 print(max(prime))
+print(time.time()-t)
 # 6857
-

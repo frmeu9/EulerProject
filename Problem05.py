@@ -34,4 +34,3 @@ while comm == 0:
 print(num)
 print(time.time()-t)
 # 232792560
-# takes too much time
