@@ -1,3 +1,6 @@
+# Longest Collatz sequence
+# Problem 14
+
 # The following iterative sequence is defined for the set of positive integers:
 #
 # n → n/2 (n is even)
@@ -34,6 +37,7 @@ for i in range(len(listchain)):
     length.append(len(listchain[i]))
 
 idx = length.index(max(length))
-print(idx)
+# print(idx)
 print(listchain[idx][0])
-
+# 837799
+# takes too much time

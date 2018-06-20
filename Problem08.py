@@ -1,3 +1,6 @@
+# Largest product in a series
+# Problem 8
+
 # The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 #
 # 73167176531330624919225119674426574742355349194934
@@ -42,10 +45,10 @@ prod = []
 for i in range(len(num_lst)):
     som = 1
     for j in range(13):
-        sum *= int(num_lst[i][j])
+        som *= int(num_lst[i][j])
     prod.append(som)
 
 
-prod.sort(reverse=True)
-print(prod)
+print(max(prod))
 print(time.time()-t)
+# 23514624000
