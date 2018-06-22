@@ -10,10 +10,11 @@ def FindFactors(nb):
     if nb == 1 or nb == 2:
         return
 
-    for x in range(1, int(middle), 1):
+    for x in range(1, int(middle)+1, 1):
         rest = nb % x
         if rest == 0:
             liste.append(x)
             liste.append(nb / x)
-    liste.sort()
+#    liste.sort()
+    liste = set(liste)
     return liste

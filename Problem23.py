@@ -12,4 +12,27 @@
 # even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less
 # than this limit. Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
-Limit = 28183
+import time
+import numpy as np
+from FindFactors import FindFactors
+
+t = time.time()
+Limit = 28184
+abundantNb = []
+NumList = np.linspace(1, Limit, num=Limit)
+
+# Finding all abundant numbers
+for nb in range(0, Limit):
+    mult = FindFactors(nb)
+    if mult is not None and sum(mult)-nb > nb:
+        abundantNb.append(nb)
+
+SumOfAbundantNn = []
+for i in range(len(abundantNb)):
+    for j in range(len(abundantNb)):
+        SumOfAbundantNn.append(abundantNb[i]+abundantNb[j])
+
+
+FinalSum = sum(set(NumList) - set(SumOfAbundantNn))
+print(FinalSum)
+print(time.time()-t)
