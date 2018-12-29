@@ -28,7 +28,6 @@ for nameIndex in range(len(NameList)):
         nameScore += alphaDict[NameList[nameIndex][letterIndex]]
     ScoreList.append(nameScore*(nameIndex+1))
 
-print(len(ScoreList))
 print(sum(ScoreList))
 print(time.time()-t)
 # 871198282

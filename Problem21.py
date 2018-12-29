@@ -8,25 +8,26 @@
 #
 # Evaluate the sum of all the amicable numbers under 10000.
 
-from isprime import isprime
-from FindFactors import FindFactors
+from number import number
 import time
 
 t = time.time()
 am_num = []
 
 for i in range(10000):
+    a = number(i)
     mult = []
-    if isprime(i) is True:
+    if a.isPrime() is True:
         continue
     else:
-        mult = FindFactors(i)
+        mult = a.findFactors()
         mult.remove(i)
         num2 = sum(mult)
-        if isprime(num2) is True:
+        b = number(num2)
+        if b.isPrime() is True:
             continue
         else:
-            mult2 = FindFactors(num2)
+            mult2 = b.findFactors()
             mult2.remove(num2)
             sum2 = sum(mult2)
             if sum2 == i and num2 != i:
@@ -37,4 +38,4 @@ for i in range(10000):
 orderedList = set(am_num)
 print(sum(orderedList))
 print(time.time()-t)
-# 31262
+# 31 626

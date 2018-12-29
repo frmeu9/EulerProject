@@ -13,7 +13,7 @@ class number:
 
         if self.num == 0 or self.num == 1:
             print('0 or 1 is an exception.')
-            return True
+            return self.factor
         for x in range(1, int(mid) + 1, 1):
             rest = self.num % x
             if rest == 0:
@@ -24,7 +24,7 @@ class number:
 
     def isPrime(self):
         self.findFactors()
-        if len(self.factor) == 2:
+        if len(self.factor) == 2 or self.num == 0 or self.num == 1:
             return True
         else:
             return False

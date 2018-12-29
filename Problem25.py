@@ -23,27 +23,26 @@
 # What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 
 import math
+from decimal import Decimal, localcontext
 
 
-def fibo(index):
-    total = 0
-    if index == 0:
-        total += 0
-    elif index == 1:
-        total += 1
-    else:
-        total += fibo(index-1)+fibo(index-2)
-    return total
 
-# length = 1
-# idx = 1
-# NumList = []
-#
-# while length < 100:
-#     num = fibo(idx)
-#     NumList.append(num)
-#     length = len(str(num))
-#     idx += 1
+def fiboNum(n):
+    with localcontext() as ctx:
+        ctx.prec = 2  # 100 digits precision
+    p1 = Decimal((1+math.sqrt(5))/2)
+    p2 = Decimal((1-math.sqrt(5))/2)
+    return Decimal((p1**n - p2**n)/math.sqrt(5))
 
 
-# Knowing that for large numbers, Fibonacci numbers converge to a certain value, we can find
+fiboLen = 0
+n = 1
+num = 0
+while fiboLen < 3:
+    n += 1
+    num = fiboNum(n)
+    fiboLen = len(str(num))
+
+print(num)
+print(n)
+print(Decimal(math.pi))

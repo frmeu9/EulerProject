@@ -10,7 +10,15 @@
 # What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 
 import itertools
+import time
 
+t = time.time()
+numStr = ''
 perm = [x for x in itertools.permutations('0123456789')]
 
-print(perm[999999])
+for i in perm[999999]:
+    numStr += i
+
+print(numStr)
+print(time.time() - t)
+# 2783915460

@@ -14,18 +14,21 @@
 
 import time
 import numpy as np
-from FindFactors import FindFactors
+from number import number
 
 t = time.time()
-Limit = 28184
+Limit = 28123
 abundantNb = []
 NumList = np.linspace(1, Limit, num=Limit)
 
 # Finding all abundant numbers
 for nb in range(0, Limit):
-    mult = FindFactors(nb)
-    if mult is not None and sum(mult)-nb > nb:
-        abundantNb.append(nb)
+    a = number(nb)
+
+    if a.isPrime() is False:
+        mult = a.findFactors()
+        if sum(mult)-nb > nb:
+            abundantNb.append(nb)
 
 SumOfAbundantNn = []
 for i in range(len(abundantNb)):
@@ -36,3 +39,4 @@ for i in range(len(abundantNb)):
 FinalSum = sum(set(NumList) - set(SumOfAbundantNn))
 print(FinalSum)
 print(time.time()-t)
+# 4 179 871

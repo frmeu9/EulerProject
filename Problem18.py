@@ -66,3 +66,4 @@ def SumPyramide(listee):
 
 print(SumPyramide(pyramid))
 print(time.time()-t)
+# 1074
