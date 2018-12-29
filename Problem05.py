@@ -16,8 +16,6 @@ t = time.time()
 checklist = np.linspace(1, 20, num=20)
 num = 0
 comm = 0
-# checklist_opt = [11, 12, 13, 14, 15, 16, 17, 18, 19]
-# print(checklist)
 
 
 while comm == 0:
@@ -33,4 +31,15 @@ while comm == 0:
 
 print(num)
 print(time.time()-t)
-# 232792560
+# 232 792 560
+
+# 20 = 2^2 * 5
+# 19 = 19
+# 18 = 2 * 3^2
+# 17 = 17
+# 16 = 2^4
+# 15 = 3 * 5
+# 14 = 2 * 7
+# 13 = 13
+# 11 = 11
+# ANSWER: 2^4 * 3^2 * 5 * 7 * 11 * 13 * 17 * 19 = 232 792 560

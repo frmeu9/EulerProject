@@ -17,8 +17,8 @@ sum_nb = 0
 
 for i in range(999):
     if np.mod(nb[i], 3) == 0 or np.mod(nb[i], 5) == 0:
-        sum_nb = sum_nb + nb[i]
+        sum_nb += nb[i]
 
 print(sum_nb)
 print(time.time()-t)
-# 233168
+# 233 168

@@ -26,4 +26,4 @@ SqAllNum = sumNum**2
 
 print(SqAllNum - SumSq)
 print(time.time()-t)
-# 25164150
+# 25 164 150

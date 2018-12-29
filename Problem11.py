@@ -79,4 +79,4 @@ for rows in range(17):
 
 print(max(prod))
 print(time.time()-t)
-# 70600674
+# 70 600 674

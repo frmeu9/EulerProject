@@ -30,4 +30,4 @@ for i in range(len(fibo)):
 print(sum_fibo)
 print(time.time()-t)
 
-# 4613732
+# 4 6137 32

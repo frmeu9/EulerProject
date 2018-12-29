@@ -5,7 +5,7 @@
 # What is the 10 001st prime number?
 
 import time
-from isprime import isprime
+from number import number
 
 t = time.time()
 listOfPrime = []
@@ -34,7 +34,8 @@ limite = 10001
 
 while len(listOfPrime) < limite:
     nb += 1
-    if isprime(nb) is True:
+    a = number(nb)
+    if a.isPrime() is True:
         listOfPrime.append(nb)
 
 

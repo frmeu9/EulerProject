@@ -22,4 +22,4 @@ for a in range(1, 1000, 1):
 
 
 print(time.time()-t)
-# 31875000
+# 31 875 000

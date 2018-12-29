@@ -20,4 +20,4 @@ for i in range(100, 1000, 1):
 
 print(max(palin))
 print(time.time()-t)
-# 906609
+# 906 609

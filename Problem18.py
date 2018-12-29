@@ -32,6 +32,10 @@
 # NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route.
 # However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by
 # brute force, and requires a clever method! ;o)
+
+import time
+
+t = time.time()
 pyramid0 = [[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]]
 pyramid = [[75],
            [95, 64],
@@ -49,19 +53,16 @@ pyramid = [[75],
            [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
            [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
 
-def PyramidPath(liste):
-    path = [liste[0][0]]
-    startCol = 0
-    for rows in range(len(liste)-1):
-        if liste[rows+1][startCol] < liste[rows+1][startCol+1]:
-            path.append(liste[rows+1][startCol+1])
-            startCol += 1
-        else:
-            path.append(liste[rows + 1][startCol])
-            startCol = startCol
-    print(sum(path))
-    print(path)
-    return sum(path), path
+
+def SumPyramide(listee):
+    line = len(listee)
+    for i in range(line-1, 0, -1):
+        newList = []
+        for j in range(len(listee[i-1])):
+            newList.append(listee[i-1][j] + max(listee[i][j], listee[i][j+1]))
+        listee[i-1] = newList
+    return listee[0][0]
 
 
-PyramidPath(pyramid)
+print(SumPyramide(pyramid))
+print(time.time()-t)

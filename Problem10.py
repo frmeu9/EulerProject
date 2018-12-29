@@ -4,7 +4,7 @@
 # The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 # Find the sum of all the primes below two million.
 
-from isprime import isprime
+from number import number
 import time
 
 s = time.time()
@@ -33,10 +33,11 @@ limite = 2000000
 
 while nb < limite:
     nb += 1
+    a = number(nb)
     if nb > 5:
         if nb % 2 == 0 or nb % 3 == 0 or nb % 5 == 0:
             continue
-    if isprime(nb) is True:
+    if a.isPrime() is True:
         summ += nb
     else:
         continue
@@ -44,4 +45,4 @@ while nb < limite:
 
 print(summ)
 print(time.time()-s)
-# 142913828922
+# 142 913 828 922
