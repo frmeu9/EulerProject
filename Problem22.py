@@ -30,4 +30,4 @@ for nameIndex in range(len(NameList)):
 
 print(sum(ScoreList))
 print(time.time()-t)
-# 871198282
+# 871 198 282

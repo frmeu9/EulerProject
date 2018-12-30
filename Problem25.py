@@ -22,27 +22,15 @@
 #
 # What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 
-import math
-from decimal import Decimal, localcontext
+import time
 
+t = time.time()
 
+fibo_sequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 
-def fiboNum(n):
-    with localcontext() as ctx:
-        ctx.prec = 2  # 100 digits precision
-    p1 = Decimal((1+math.sqrt(5))/2)
-    p2 = Decimal((1-math.sqrt(5))/2)
-    return Decimal((p1**n - p2**n)/math.sqrt(5))
+while len(str(fibo_sequence[-1])) < 1000:
+    fibo_sequence.append(fibo_sequence[-1] + fibo_sequence[-2])
 
-
-fiboLen = 0
-n = 1
-num = 0
-while fiboLen < 3:
-    n += 1
-    num = fiboNum(n)
-    fiboLen = len(str(num))
-
-print(num)
-print(n)
-print(Decimal(math.pi))
+print(len(fibo_sequence))
+print(time.time()-t)
+# 4 782

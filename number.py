@@ -5,7 +5,7 @@ import numpy as np
 
 class number:
     def __init__(self, num):
-        self.num = num
+        self.num = abs(num)
         self.factor = []
 
     def findFactors(self):
@@ -13,7 +13,7 @@ class number:
 
         if self.num == 0 or self.num == 1:
             print('0 or 1 is an exception.')
-            return self.factor
+            return False
         for x in range(1, int(mid) + 1, 1):
             rest = self.num % x
             if rest == 0:

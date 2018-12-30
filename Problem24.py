@@ -21,4 +21,4 @@ for i in perm[999999]:
 
 print(numStr)
 print(time.time() - t)
-# 2783915460
+# 2 783 915 460
